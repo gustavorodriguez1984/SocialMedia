@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\NetCoreCourse\\SocialMedia\\SocialMediaApi\\SocialMediaApi.csproj": {}
+    "E:\\NetCoreCourse\\SocialMedia\\SocialMediaCore\\SocialMediaCore.csproj": {}
   },
   "projects": {
-    "E:\\NetCoreCourse\\SocialMedia\\SocialMediaApi\\SocialMediaApi.csproj": {
+    "E:\\NetCoreCourse\\SocialMedia\\SocialMediaCore\\SocialMediaCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\NetCoreCourse\\SocialMedia\\SocialMediaApi\\SocialMediaApi.csproj",
-        "projectName": "SocialMediaApi",
-        "projectPath": "E:\\NetCoreCourse\\SocialMedia\\SocialMediaApi\\SocialMediaApi.csproj",
+        "projectUniqueName": "E:\\NetCoreCourse\\SocialMedia\\SocialMediaCore\\SocialMediaCore.csproj",
+        "projectName": "SocialMediaCore",
+        "projectPath": "E:\\NetCoreCourse\\SocialMedia\\SocialMediaCore\\SocialMediaCore.csproj",
         "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "E:\\NetCoreCourse\\SocialMedia\\SocialMediaApi\\obj\\",
+        "outputPath": "E:\\NetCoreCourse\\SocialMedia\\SocialMediaCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -54,9 +54,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
