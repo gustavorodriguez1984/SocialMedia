@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaCore", "SocialMe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaInfrastructure", "SocialMediaInfrastructure\SocialMediaInfrastructure.csproj", "{27164034-F0EC-4C61-BF20-96DD570A51B8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{84F71FD6-E450-4BBE-8F4B-46F43F529A8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaUnitTest", "SocialMediaUnitTest\SocialMediaUnitTest.csproj", "{39BDBBEC-9B31-415C-8D6E-E2351380E15B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaIntegrationTest", "SocialMediaIntegrationTest\SocialMediaIntegrationTest.csproj", "{1F332EEC-4E57-40B6-B204-EF939029C7C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +33,21 @@ Global
 		{27164034-F0EC-4C61-BF20-96DD570A51B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27164034-F0EC-4C61-BF20-96DD570A51B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27164034-F0EC-4C61-BF20-96DD570A51B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39BDBBEC-9B31-415C-8D6E-E2351380E15B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39BDBBEC-9B31-415C-8D6E-E2351380E15B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39BDBBEC-9B31-415C-8D6E-E2351380E15B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39BDBBEC-9B31-415C-8D6E-E2351380E15B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F332EEC-4E57-40B6-B204-EF939029C7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F332EEC-4E57-40B6-B204-EF939029C7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F332EEC-4E57-40B6-B204-EF939029C7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F332EEC-4E57-40B6-B204-EF939029C7C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39BDBBEC-9B31-415C-8D6E-E2351380E15B} = {84F71FD6-E450-4BBE-8F4B-46F43F529A8C}
+		{1F332EEC-4E57-40B6-B204-EF939029C7C4} = {84F71FD6-E450-4BBE-8F4B-46F43F529A8C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E48F7100-1A6C-43C6-9C8F-A1AF2DF7A1FD}

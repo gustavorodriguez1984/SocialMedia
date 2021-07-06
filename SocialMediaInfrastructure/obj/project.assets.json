@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "SocialMediaCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/SocialMediaCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SocialMediaCore.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SocialMediaCore/1.0.0": {
+      "type": "project",
+      "path": "../SocialMediaCore/SocialMediaCore.csproj",
+      "msbuildProject": "../SocialMediaCore/SocialMediaCore.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "SocialMediaCore >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Administrador\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\NetCoreCourse\\SocialMedia\\SocialMediaCore\\SocialMediaCore.csproj": {
+              "projectPath": "E:\\NetCoreCourse\\SocialMedia\\SocialMediaCore\\SocialMediaCore.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

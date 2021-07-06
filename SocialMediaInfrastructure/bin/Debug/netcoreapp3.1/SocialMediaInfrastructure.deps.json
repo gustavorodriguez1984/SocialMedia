@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "SocialMediaInfrastructure/1.0.0": {
+        "dependencies": {
+          "SocialMediaCore": "1.0.0"
+        },
+        "runtime": {
+          "SocialMediaInfrastructure.dll": {}
+        }
+      },
+      "SocialMediaCore/1.0.0": {
+        "runtime": {
+          "SocialMediaCore.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SocialMediaInfrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SocialMediaCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
