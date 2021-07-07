@@ -10,3 +10,6 @@ E:\NetCoreCourse\SocialMedia\SocialMediaInfrastructure\obj\Debug\netcoreapp3.1\S
 E:\NetCoreCourse\SocialMedia\SocialMediaInfrastructure\obj\Debug\netcoreapp3.1\SocialMediaInfrastructure.csproj.CopyComplete
 E:\NetCoreCourse\SocialMedia\SocialMediaInfrastructure\obj\Debug\netcoreapp3.1\SocialMediaInfrastructure.dll
 E:\NetCoreCourse\SocialMedia\SocialMediaInfrastructure\obj\Debug\netcoreapp3.1\SocialMediaInfrastructure.pdb
+E:\NetCoreCourse\SocialMedia\SocialMediaInfrastructure\bin\Debug\netcoreapp3.1\SocialMediaInfrastructure.runtimeconfig.json
+E:\NetCoreCourse\SocialMedia\SocialMediaInfrastructure\bin\Debug\netcoreapp3.1\SocialMediaInfrastructure.runtimeconfig.dev.json
+E:\NetCoreCourse\SocialMedia\SocialMediaInfrastructure\obj\Debug\netcoreapp3.1\SocialMediaInfrastructure.genruntimeconfig.cache
