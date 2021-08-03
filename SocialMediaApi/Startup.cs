@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -8,7 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using SocialMediaCore.Interfaces;
+using SocialMediaCore.Services;
 using SocialMediaInfrastructure.Data;
+using SocialMediaInfrastructure.Filters;
 using SocialMediaInfrastructure.Repositories;
 using System;
 using System.Collections.Generic;
@@ -29,11 +32,30 @@ namespace SocialMediaApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddControllers().AddNewtonsoftJson(options =>
+           {
+               options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+           }).ConfigureApiBehaviorOptions(options => {
+               //options.SuppressModelStateInvalidFilter = true;  //suprimir validacion ModelState aunq este el atributo ApiController.
+
+           });
+              
             services.AddDbContext<SocialMediaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SocialMedia"))
             );
 
-            services.AddTransient<IPostRepository,PostRepository>();
+            services.AddTransient<IPostService, PostService>();
+            services.AddTransient<IPostRepository, PostRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddScoped(typeof(IRepository<>),typeof(BaseRepository<>));
+            
+            services.AddMvc(options =>
+            {
+                options.Filters.Add<ValidationFilter>();
+            }).AddFluentValidation(options => {
+                options.RegisterValidatorsFromAssemblies(AppDomain.CurrentDomain.GetAssemblies());
+            });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

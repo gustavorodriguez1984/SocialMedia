@@ -1,0 +1,17 @@
+﻿using SocialMediaCore.Entities;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SocialMediaCore.Interfaces
+{
+   public interface IPostService
+    {
+        Task<IEnumerable<Post>> GetPosts();
+        Task<Post> GetPost(int id);
+        Task InsertPost(Post post);
+        Task<bool> UpdatePost(Post post);
+        Task<bool> DeletePost(int id);
+    }
+}
