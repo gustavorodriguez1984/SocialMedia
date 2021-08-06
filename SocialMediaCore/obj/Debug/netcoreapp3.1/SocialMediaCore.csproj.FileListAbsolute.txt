@@ -1,9 +1,9 @@
 E:\NetCoreCourse\SocialMedia\SocialMediaCore\bin\Debug\netcoreapp3.1\SocialMediaCore.deps.json
 E:\NetCoreCourse\SocialMedia\SocialMediaCore\bin\Debug\netcoreapp3.1\SocialMediaCore.dll
 E:\NetCoreCourse\SocialMedia\SocialMediaCore\bin\Debug\netcoreapp3.1\SocialMediaCore.pdb
-E:\NetCoreCourse\SocialMedia\SocialMediaCore\obj\Debug\netcoreapp3.1\SocialMediaCore.csprojAssemblyReference.cache
 E:\NetCoreCourse\SocialMedia\SocialMediaCore\obj\Debug\netcoreapp3.1\SocialMediaCore.AssemblyInfoInputs.cache
 E:\NetCoreCourse\SocialMedia\SocialMediaCore\obj\Debug\netcoreapp3.1\SocialMediaCore.AssemblyInfo.cs
 E:\NetCoreCourse\SocialMedia\SocialMediaCore\obj\Debug\netcoreapp3.1\SocialMediaCore.csproj.CoreCompileInputs.cache
 E:\NetCoreCourse\SocialMedia\SocialMediaCore\obj\Debug\netcoreapp3.1\SocialMediaCore.dll
 E:\NetCoreCourse\SocialMedia\SocialMediaCore\obj\Debug\netcoreapp3.1\SocialMediaCore.pdb
+E:\NetCoreCourse\SocialMedia\SocialMediaCore\obj\Debug\netcoreapp3.1\SocialMediaCore.csprojAssemblyReference.cache

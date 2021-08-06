@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "W1HAZW8ZVtELrsBtmaQ9/us91fZUuE3fcG03+gBYMzBswt9Is5xrEF6pMfbnKfwa/A0Xk6ZvAZsP0cYfdM17Dg==",
+  "dgSpecHash": "rAJKk51D6UEq7qrie9NmmS37SlySwF4O3U/qfM/UBsScoOle8KJSKQvBYeyywHGYSEJgMLNJRS61Nq4WQmzbhQ==",
   "success": true,
   "projectFilePath": "E:\\NetCoreCourse\\SocialMedia\\SocialMediaCore\\SocialMediaCore.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

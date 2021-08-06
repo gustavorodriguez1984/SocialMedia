@@ -6,7 +6,10 @@ namespace SocialMediaCore.DTOs
 {
    public  class PostDto
     {
-        public int PostId { get; set; }
+        /// <summary>
+        /// Id Autogenerado por entidad post
+        /// </summary>
+        public int Id { get; set; }
         public int UserId { get; set; }
         public DateTime? Date { get; set; } //al agregar ? estoy haciendo un campo nuleable
         public string Description { get; set; }
