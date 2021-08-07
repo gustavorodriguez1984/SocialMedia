@@ -72,3 +72,10 @@ E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\Swashbuckle.
 E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\SocialMediaApi.xml
 E:\NetCoreCourse\SocialMedia\SocialMediaApi\obj\Debug\netcoreapp3.1\SocialMediaApi.xml
+E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\NetCoreCourse\SocialMedia\SocialMediaApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
