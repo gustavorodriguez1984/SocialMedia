@@ -13,7 +13,6 @@ using SocialMediaCore.Interfaces;
 using SocialMediaCore.Services;
 using SocialMediaInfrastructure.Data;
 using SocialMediaInfrastructure.Filters;
-using SocialMediaCore.Options;
 using SocialMediaInfrastructure.Repositories;
 using SocialMediaInfrastructure.Services;
 using System;
@@ -26,6 +25,8 @@ using System.IO;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using SocialMediaInfrastructure.Options;
+using SocialMediaCore.CustomEntities;
 
 namespace SocialMediaApi
 {
@@ -54,14 +55,17 @@ namespace SocialMediaApi
            });
 
             services.Configure<PaginationOptions>(Configuration.GetSection("Pagination"));//con configure es como usar un singleton que ya queda instanciado en el proyecto no se destruye.
+            services.Configure<PasswordOptions>(Configuration.GetSection("PasswordOptions"));
             services.AddDbContext<SocialMediaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SocialMedia"))
             );
 
             services.AddTransient<IPostService, PostService>();
+            services.AddTransient<ISecurityService, SecurityService>();
             //services.AddTransient<IPostRepository, PostRepository>();
             //services.AddTransient<IUserRepository, UserRepository>();
             services.AddScoped(typeof(IRepository<>),typeof(BaseRepository<>));
             services.AddTransient<IUnitOfWork,UnitOfWork>();
+            services.AddSingleton<IPasswordService, PasswordService>();
             services.AddSingleton<IUriService>(provider =>
             {
                 var accesor = provider.GetRequiredService<IHttpContextAccessor>();
@@ -115,8 +119,9 @@ namespace SocialMediaApi
             app.UseHttpsRedirection();
             app.UseSwagger();
             app.UseSwaggerUI(options=> {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Social Media API");//la rutaa en donde generamos el json d enuestra documentacion.
-                options.RoutePrefix = string.Empty;
+                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Social Media API");//la ruta en donde generamos el json d enuestra documentacion, esta ruta solo funciona en IIS EXPRESS
+               // options.SwaggerEndpoint("../swagger/v1/swagger.json", "Social Media API"); al agregar los dos puntos funciona con subsitios en en el IIS Server
+                options.RoutePrefix = string.Empty;//esta linea cuando haga el deploy en un servidor IIS la tengo que comentar.
             });
             app.UseRouting();
 

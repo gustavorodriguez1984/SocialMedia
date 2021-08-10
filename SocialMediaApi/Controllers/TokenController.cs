@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using SocialMediaCore.Entities;
+using SocialMediaCore.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,46 +16,52 @@ namespace SocialMediaApi.Controllers
     public class TokenController : ControllerBase
     {
         private readonly IConfiguration _configuration; //el formato con el guion bajo en las variables es oara variables globales para la clase.
-        public TokenController(IConfiguration configuration)
+        private readonly ISecurityService _securityService;
+        private readonly IPasswordService _passwordService;
+        public TokenController(IConfiguration configuration, ISecurityService securityService, IPasswordService passwordService)
         {
             _configuration = configuration;
+            _securityService = securityService;
+            _passwordService = passwordService;
         }
-        [HttpPost]
-        public IActionResult Authentication(UserLogin login)
-        {
-            
-           
 
-            // sie s un usuario valido
-            if (IsValidUser(login))
+        [HttpPost]
+        public async Task<IActionResult> Authentication(UserLogin login)
+        {
+            //if it is a valid user
+            var validation = await IsValidUser(login);
+            if (validation.Item1)
             {
-                var token = GenerateToken();
+                var token = GenerateToken(validation.Item2);
                 return Ok(new { token });
             }
 
             return NotFound();
         }
-        private bool IsValidUser(UserLogin login)
+
+
+        private async Task<(bool, Security)> IsValidUser(UserLogin login)
         {
-            return true;
+            var user = await _securityService.GetLoginByCredentials(login);
+            var isValid = _passwordService.Check(user.Password, login.Password);
+            return (isValid, user);
         }
 
-        private string GenerateToken()
+        private string GenerateToken(Security security)
         {
             //Header
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Authentication:SecretKey"]));
             var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
             var header = new JwtHeader(signingCredentials);
 
-         
 
-            //Claims informacion que se le agrega al cuerpo del mensaje q se genera.
+
+            //Claims
             var claims = new[]
             {
-                new Claim(ClaimTypes.Name,"Gustavo Rodriguez"),//Jonathan Estrada
-                  new Claim(ClaimTypes.Email,"gr978788@gmail.com"),//jestrada@gmail.com
-                    new Claim(ClaimTypes.Role,"Administrador"),
-
+                new Claim(ClaimTypes.Name, security.UserName),
+                new Claim("User", security.User),
+                new Claim(ClaimTypes.Role, security.Role.ToString()),
             };
 
             //Payload

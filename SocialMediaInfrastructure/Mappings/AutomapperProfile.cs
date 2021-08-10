@@ -13,6 +13,7 @@ namespace SocialMediaInfrastructure.Mappings
         {
             CreateMap<Post, PostDto>();
             CreateMap<PostDto,Post>();
+            CreateMap<Security, SecurityDto>().ReverseMap(); //reverse map mapea me permite mapear las dos entidades de una lado hacia otro sin necesidad de dos lineas de codigo.
         }
     }
 }

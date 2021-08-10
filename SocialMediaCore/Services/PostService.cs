@@ -3,7 +3,6 @@ using SocialMediaCore.CustomEntities;
 using SocialMediaCore.Entities;
 using SocialMediaCore.Exceptions;
 using SocialMediaCore.Interfaces;
-using SocialMediaCore.Options;
 using SocialMediaCore.QueryFilters;
 using System;
 using System.Collections.Generic;
@@ -78,14 +77,14 @@ namespace SocialMediaCore.Services
                 throw new BusinessException("Contenido no permitido");
             }
             await _unitOfWork.PostRepository.Add(post);
-            await _unitOfWork.SaveCHangesAsync();
+            await _unitOfWork.SaveChangesAsync();
 
         }
 
         public async Task<bool> UpdatePost(Post post)
         {
              _unitOfWork.PostRepository.Update(post);
-           await _unitOfWork.SaveCHangesAsync();
+           await _unitOfWork.SaveChangesAsync();
             return true;
 
         }
